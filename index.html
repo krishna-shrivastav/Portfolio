@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- THEME CONFIGURATION --- */
+       
         :root {
             --bg-color: #0f172a;       
             --card-bg: #1e293b;        
@@ -51,22 +51,17 @@
         ul {
             list-style: none;
         }
-
-        /* --- LAYOUT UTILITIES --- */
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 25px;
         }
-
         .section-spacing {
             padding: 80px 0;
         }
-
         h1, h2, h3, h4 {
             color: var(--text-primary);
         }
-
         .section-header {
             display: flex;
             flex-direction: column;
@@ -74,7 +69,6 @@
             margin-bottom: 3rem;
             text-align: center;
         }
-
         .section-title {
             font-size: 2rem;
             font-weight: 700;
@@ -83,8 +77,7 @@
             position: relative;
             display: inline-block;
         }
-        
-        .section-title::after {
+                .section-title::after {
             content: '';
             display: block;
             width: 60px;
@@ -94,7 +87,7 @@
             border-radius: 2px;
         }
 
-        /* --- NAVIGATION BAR --- */
+     
         header {
             position: fixed;
             top: 20px;
@@ -105,7 +98,6 @@
             justify-content: center;
             padding: 0 20px;
         }
-
         nav {
             background: rgba(30, 41, 59, 0.95);
             backdrop-filter: blur(12px);
@@ -119,7 +111,6 @@
             box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
             max-width: 100%;
         }
-
         .logo {
             font-weight: 700;
             font-size: 1.1rem;
@@ -127,23 +118,19 @@
             letter-spacing: 1px;
             white-space: nowrap;
         }
-
         .nav-links {
             display: flex;
             gap: 20px;
         }
-
         .nav-links a {
             font-size: 0.9rem;
             color: var(--text-secondary);
             font-weight: 500;
         }
-
         .nav-links a:hover {
             color: var(--accent-color);
         }
 
-        /* --- HERO SECTION --- */
         .hero {
             min-height: 95vh;
             display: flex;
@@ -151,7 +138,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding-top: 80px; /* Added padding to prevent nav overlap */
+            padding-top: 80px; 
             position: relative;
         }
 
@@ -166,7 +153,6 @@
             padding: 5px 15px;
             border-radius: 20px;
         }
-
         .hero h1 {
             font-size: 3.5rem;
             line-height: 1.1;
@@ -225,25 +211,148 @@
             color: var(--accent-color);
         }
 
-        /* --- EDUCATION CARD --- */
-        .education-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 20px;
-            border-left: 15px solid var(--accent-color);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        
+
+.education-timeline{
+
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.education-card{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1e293b;
+    border:1px solid rgba(255,255,255,.08);
+    border-left:6px solid #22d3ee;
+    border-radius:50px;
+    padding:25px 30px;
+    transition:.35s;
+    gap:25px;
+}
+
+.education-card:hover{
+
+    transform:translateY(-5px);
+    border-color:#22d3ee;
+    box-shadow:0 15px 40px rgba(34,211,238,.15);
+}
+
+.edu-left{
+
+    display:flex;
+    align-items:center;
+    gap:22px;
+    flex:1;
+}
+
+.edu-icon{
+
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#22d3ee;
+    color:#0f172a;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:26px;
+    flex-shrink:0;
+}
+
+.edu-info h3{
+
+    font-size:24px;
+    margin-bottom:8px;
+    color:#fff;
+}
+
+.edu-info p{
+
+    color:#b7c4d8;
+    font-size:16px;
+    line-height:1.7;
+}
+
+.edu-date{
+
+    min-width:170px;
+    text-align:center;
+    background:#293548;
+    padding:14px 20px;
+    border-radius:12px;
+    font-weight:600;
+    color:#22d3ee;
+}
+
+.edu-date span{
+
+    display:block;
+    margin-top:5px;
+    color:#d1d5db;
+    font-size:14px;
+}
+@media(max-width:768px){
+.education-card{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:5px;
+}
+.edu-left{
+    flex-direction:column;
+    align-items:flex-start;
+}
+.edu-icon{
+
+    width:55px;
+    height:55px;
+    font-size:22px;
+}
+.edu-info h3{
+    font-size:20px;
+}
+.edu-info p{
+    font-size:15px;
+}
+.edu-date{
+
+    width:100%;
+    text-align:center;
+}
+
+}
+
+.education-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    width:100%;
+}
+
+@media(max-width:768px){
+
+.education-card{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.edu-date{
+    width:100%;
+    text-align:center;
+}
+}
         .education-card:hover {
     border-left-color: var(--accent-color);
     box-shadow: 0 0 25px var(--accent-glow);
 }
-
         .edu-info h3 { font-size: 1.3rem; margin-bottom: 5px; }
         .edu-info p { color: var(--text-secondary); }
         .edu-date { 
@@ -254,14 +363,13 @@
             white-space: nowrap;
         }
 
-        /* --- SKILLS GRID --- */
       .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
     max-width: 1000px;
-    margin: 0 auto; /* 👈 center align */
-    padding: 0 20px; /* 👈 left-right gap */
+    margin: 0 auto; 
+    padding: 0 20px; 
 }
 
 .skills {
@@ -274,15 +382,12 @@
         gap: 20px;
     }
 }
-
-
         .skill-category {
             background: var(--card-bg);
             padding: 25px;
             border-radius: 15px;
             border: 1px solid var(--border-color);
         }
-
         .skill-category h4 {
             color: var(--accent-color);
             margin-bottom: 15px;
@@ -307,14 +412,12 @@
             color: var(--accent-color);
         }
 
-        /* --- PROJECTS GRID --- */
+        
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 25px;
         }
-
-        /* CLICKABLE CARD STYLES */
         .project-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -325,10 +428,9 @@
             transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
             cursor: pointer;
             position: relative;
-            text-decoration: none !important; /* Force no underline */
+            text-decoration: none !important; 
         }
-        
-        /* Ensure text colors stay correct even for visited links */
+    
         .project-card:visited h3, 
         .project-card:active h3, 
         .project-card:link h3 {
@@ -347,9 +449,9 @@
             box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
         }
         
-        /* External Link Icon */
+      
         .project-card::after {
-            content: '\f35d'; /* Font Awesome external link */
+            content: '\f35d'; 
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             position: absolute;
@@ -359,7 +461,6 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
-        
         .project-card:hover::after {
             opacity: 1;
         }
@@ -368,7 +469,6 @@
             font-size: 1.25rem;
             margin-bottom: 10px;
         }
-
         .project-card p {
             font-size: 0.9rem;
             margin-bottom: 20px;
@@ -389,19 +489,14 @@
             padding: 4px 10px;
             border-radius: 20px;
         }
-
-        /* --- TRAININGS & ACHIEVEMENTS --- */
-
-
         .flex-row {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
     max-width: 1000px;
-    margin: 0 auto;      /* center */
-    padding: 0 20px;     /* left-right gap */
+    margin: 0 auto;      
+    padding: 0 20px;  
 }
-
        @media (max-width: 768px) {
     .flex-row {
         padding: 0 10px;
@@ -418,7 +513,6 @@
     border-color: var(--accent-color);
     box-shadow: 0 0 25px var(--accent-glow);
 }
-
         .half-width {
             flex: 1;
             min-width: 300px;
@@ -431,7 +525,6 @@
             border: 1px solid var(--border-color);
             margin-bottom: 15px;
         }
-        
         .list-card h4 { margin-bottom: 15px; color: var(--accent-color); }
 
         .check-list li {
@@ -446,8 +539,6 @@
             color: var(--accent-color);
             margin-top: 5px;
         }
-
-        /* --- FOOTER --- */
         footer {
             margin-top: 80px;
             padding: 40px 0;
@@ -457,17 +548,15 @@
             font-size: 0.9rem;
             border-top: 1px solid var(--border-color);
         }
-
         .hero {
     min-height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 120px; /* navbar overlap fix */
+    padding-top: 120px; 
     text-align: center;
 }
-
 .hero-intro {
     display: flex;
     align-items: center;
@@ -475,7 +564,6 @@
     gap: 25px;
     margin-bottom: 20px;
 }
-
 .hero-text h1 {
     font-size: 3.3rem;
     line-height: 1.1;
@@ -488,8 +576,7 @@
     overflow: hidden;
     border: 3px solid var(--accent-color);
     box-shadow: 0 0 30px var(--accent-glow);
-    transform: translateX(-10px); /* 👈 thoda left */
-}
+    transform: translateX(-10px); }
 
 .profile-pic img {
     width: 100%;
@@ -520,24 +607,22 @@
 }
 
 
-        /* --- RESPONSIVE MOBILE DESIGN --- */
+        
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             
-            /* Nav Adjustment for Mobile */
+           
             nav { 
                 gap: 15px; 
                 padding: 10px 20px; 
-                width: 90%; /* Slightly wider on mobile */
+                width: 90%; 
                 justify-content: space-between;
             }
             
-            /* Instead of hiding, we make text smaller or stack */
             .nav-links { 
-                display: none; /* Keeping hidden on very small screens to prevent breaking, recommend adding a JS toggle for full mobile menu in future */ 
+                display: none; 
             }
             
-            /* Show contact button on mobile */
             .collab-btn {
                 display: block;
             }
@@ -576,9 +661,100 @@
         height: 380px;
     }
 }
+.achievement-card{
+    width: 100%;
+    max-width: 230px;
+    background: #1a2740;
+    border-radius: 18px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.3s ease;
+}
 
+.achievement-card:hover{
+    transform: translateY(-5px);
+}
 
+.achievement-card img{
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
 
+.achievement-card h3{
+    color: white;
+    font-size: 18px;
+    margin: 12px 10px 6px;
+}
+
+.achievement-card p{
+    color: #b7c4d8;
+    font-size: 14px;
+    padding: 0 10px;
+    line-height: 1.5;
+}
+
+.achievements-section{
+    padding: 60px 8%;
+    background: #071126;
+}
+
+.section-title{
+    color: white;
+    font-size: 32px;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+.achievements-container{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.achievement-card{
+    width:100%;
+    max-width:340px;
+    margin:auto;
+    background:#16233b;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.achievements-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.achievement-card:hover{
+    transform: translateY(-8px);
+}
+
+.achievement-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.achievement-content{
+    padding: 20px;
+}
+
+.achievement-content h3{
+    color: white;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.achievement-content p{
+    color: #b9c6da;
+    font-size: 15px;
+}
 
     </style>
 </head>
@@ -591,11 +767,10 @@
                 <a href="#education">Education</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
-                <a href="#certifications">Certifications</a>
-           
-
-            </div>
-            <a href="mailto:krishanashrivastav9@gmail.com" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.85rem;">Contact Me</a>
+                <a href="#achievement">Achievements</a>
+                <a href="#certification">Certifications</a>
+                    </div>
+            <a href="#contact" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.85rem;">Contact Me</a>
         </nav>
     </header>
 
@@ -636,19 +811,273 @@
 
 </section>
 
+<section id="education" class="section-spacing">
+    <div class="section-header">
+        <h2 class="section-title">Education</h2>
+    </div>
 
-        <section id="education" class="section-spacing">
-            <div class="section-header">
-                <h2 class="section-title">Education</h2>
-            </div>
-            <div class="education-card">
+    <div class="education-timeline">
+
+        <!-- B.Tech -->
+        <div class="education-card">
+            <div class="edu-left">
+                <div class="edu-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
                 <div class="edu-info">
                     <h3>B.Tech in Computer Science (AI & ML)</h3>
-                    <p>KIPM College of Engineering & Technology, Gida, Gorakhpur </p>
+                    <p>KIPM College of Engineering & Technology, GIDA, Gorakhpur</p>
                 </div>
-                <div class="edu-date">2nd Year (2025 - Present) </div>
             </div>
-        </section>
+
+            <div class="edu-date">
+                2024 – 2028 <br>
+                <span>3rd Year</span>
+            </div>
+        </div>
+
+        <!-- 12th -->
+        <div class="education-card">
+            <div class="edu-left">
+                <div class="edu-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+
+                <div class="edu-info">
+                    <h3>Senior Secondary (Class XII)</h3>
+                    <p>Central Hindu School Gorakhpur</p>
+                </div>
+            </div>
+
+            <div class="edu-date">
+                2023 – 2024 <br>
+                <span>Completed</span>
+            </div>
+        </div>
+
+        <!-- 10th -->
+        <div class="education-card">
+            <div class="edu-left">
+                <div class="edu-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+
+                <div class="edu-info">
+                    <h3>Secondary (Class X)</h3>
+                    <p>STNT Public School Fazilnagar</p>
+                </div>
+            </div>
+
+            <div class="edu-date">
+                2021 – 2022 <br>
+                <span>Completed</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Experience -->
+
+
+
+<style>.experience-card{
+
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+
+    background:#1e293b;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    border-left:6px solid #22d3ee;
+
+    transition:.3s;
+}
+
+.experience-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 40px rgba(34,211,238,.15);
+
+}
+
+.exp-logo img{
+
+    width:80px;
+
+    height:80px;
+
+    object-fit:contain;
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:8px;
+}
+
+.exp-content{
+
+    flex:1;
+}
+
+.exp-content h3{
+    font-size:30px;
+    margin-bottom:5px;
+}
+
+.exp-content h4{
+    color:#22d3ee;
+    margin-bottom:10px;
+}
+.exp-type{
+    color:#cbd5e1;
+    margin-bottom:8px;
+}
+.exp-location{
+
+    color:#94a3b8;
+
+    margin-bottom:18px;
+}
+.exp-content ul{
+    padding-left:20px;
+    color:#cbd5e1;
+    line-height:1.8;
+}
+@media(max-width:768px){
+.experience-card{
+    flex-direction:column;
+    text-align:left;
+}
+.exp-logo{
+    margin:auto;
+}
+.exp-logo img{
+    width:70px;
+    height:70px;
+}
+.exp-content h3{
+    font-size:24px;
+}
+}
+.exp-list{
+    list-style:none;
+    margin-top:25px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+.exp-list li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    background:rgba(255,255,255,.04);
+
+    padding:16px 18px;
+
+    border-radius:12px;
+
+    transition:.3s;
+
+    line-height:1.7;
+
+    color:#dbe4f0;
+}
+
+.exp-list li:hover{
+
+    background:rgba(34,211,238,.08);
+
+    transform:translateX(6px);
+}
+
+.exp-list i{
+
+    color:#22d3ee;
+
+    font-size:18px;
+
+    margin-top:4px;
+
+    min-width:20px;
+}
+
+.exp-logo a{
+
+    display:inline-block;
+}
+
+.exp-logo img{
+
+    width:90px;
+
+    height:90px;
+
+    object-fit:contain;
+
+    background:#fff;
+
+    padding:10px;
+
+    border-radius:15px;
+
+    transition:.35s;
+}
+.exp-logo img:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 25px rgba(34,211,238,.35);
+}
+</style>
+
+
+<section id="experience" class="section-spacing">
+    <div class="section-header">
+        <h2 class="section-title">Experience</h2>
+    </div>
+
+    <div class="experience-card">
+
+        <div class="exp-logo">
+    <a href="https://swadrive.in" target="_blank">
+        <img src="my logo.png" alt="SwaDrive Logo">
+    </a>
+</div>
+
+        <div class="exp-content">
+            <h3>Co-Founder</h3>
+            <h4>SwaDrive</h4>
+            <p class="exp-type">
+                Full-Time • Jul 2026 – Present
+            </p>
+            <p class="exp-location">
+                📍 Gorakhpur, Uttar Pradesh, India
+            </p>
+            <ul class="exp-list">
+    <li>
+           <i class="fas fa-lightbulb"></i>
+        Transforming innovative ideas into practical digital solutions with a user-first approach.
+    </li>
+    <li>
+        <i class="fas fa-chart-line"></i>
+        Leading product strategy, execution, and business planning to drive startup growth.
+    </li>
+</ul>
+        </div>
+
+    </div>
+</section>
+
 
         <section id="skills" class="section-spacing">
             <div class="section-header">
@@ -667,9 +1096,9 @@
                 <div class="skill-category">
                     <h4><i class="fas fa-brain"></i> AI & Machine Learning</h4>
                     <ul class="skill-list">
-                        <li>TensorFlow </li>
-                        <li>Scikit-learn </li>
                         <li>Pandas & NumPy </li>
+                        <li>Matplotlib<li>
+                       
                         <li>Model Development </li>
                     </ul>
                 </div>
@@ -684,6 +1113,71 @@
                 </div>
             </div>
         </section>
+
+<style>.skill-btn{
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    margin-top:20px;
+
+    padding:12px 22px;
+
+    background:linear-gradient(135deg,#00d4ff,#00b8d4);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+    box-shadow:0 8px 20px rgba(0,212,255,.25);
+
+}
+
+.skill-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:linear-gradient(135deg,#00b8d4,#0097a7);
+
+    box-shadow:0 12px 25px rgba(0,212,255,.4);
+
+}
+
+.skill-btn i{
+
+    transition:.3s;
+}
+
+.skill-btn:hover i{
+
+    transform:translateX(6px);
+}</style>
+
+
+<div class="skill-category">
+    <h4><i class="fas fa-chalkboard-teacher"></i> Workshop & Leadership</h4>
+
+    <ul class="skill-list">
+        <li>Technical Workshop Facilitation</li>
+        <li>Public Speaking & Presentation</li>
+        <li>Student Mentoring</li>
+        <li>Event Planning & Coordination</li>
+    </ul>
+     <a href="#workshops" class="skill-btn">
+        View My Workshops
+        <i class="fas fa-arrow-right"></i>
+    </a>
+</div>  
+
 
         <section id="projects" class="section-spacing">
             <div class="section-header">
@@ -750,43 +1244,918 @@
                     </div>
                 </a>
 
-                <a href="https://krishna-shrivastav.github.io/Swa-Drive/" target="_blank" rel="noopener noreferrer" class="project-card" style="border-style: dashed;">
-                    <h3>SwaDrive (In Progress)</h3>
-                    <p>Digital storage & automation service for efficient file handling.</p>
-                    <div class="tags">
-                        <span class="tag">Cloud</span>
-                        <span class="tag">Automation</span>
-                    </div>
+              
+                   
                 </a>
             </div>
         </section>
+<!-- Workshop and Training -->
+<style>.section-subtitle{
+    max-width:700px;
+    margin:auto;
+    margin-top:15px;
+    color:#94a3b8;
+    text-align:center;
+}
+.workshop-grid{
 
-        <section id="certifications" class="section-spacing">
-            <div class="flex-row">
-                <div class="half-width">
-                    <h3 style="margin-bottom: 20px;">Trainings & Certifications</h3>
-                    <div class="list-card">
-                        <ul class="check-list">
-                            <li><i class="fas fa-certificate"></i> AI/ML Certification </li>
-                            <li><i class="fas fa-certificate"></i> IoT Bootcamp </li>
-                            <li><i class="fas fa-certificate"></i> 1-Month Python Training </li>
-                            <li><i class="fas fa-certificate"></i> HTML Bootcamp </li>
-                        </ul>
-                    </div>
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.workshop-card{
+
+    background:#1e293b;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.workshop-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 40px rgba(34,211,238,.15);
+}
+
+.workshop-card img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+}
+
+.workshop-content{
+
+    padding:25px;
+}
+
+.workshop-content h3{
+
+    margin-bottom:15px;
+
+    font-size:24px;
+}
+
+.workshop-content p{
+
+    color:#b8c5d6;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+}
+
+.workshop-meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:20px;
+
+    color:#22d3ee;
+
+    font-size:15px;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+}
+
+.workshop-content button{
+
+    width:100%;
+
+    border:none;
+
+    background:#22d3ee;
+
+    color:#071126;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.workshop-content button:hover{
+
+    transform:translateY(-3px);
+}
+
+@media(max-width:768px){
+
+.workshop-grid{
+
+    grid-template-columns:1fr;
+}
+
+.workshop-card img{
+
+    height:200px;
+}
+
+.workshop-content{
+
+    padding:20px;
+}
+
+}
+
+
+.gallery-modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.92);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+}
+
+.gallery-modal img{
+
+    max-width:90%;
+
+    max-height:85vh;
+
+    border-radius:15px;
+
+    box-shadow:0 0 40px rgba(255,255,255,.2);
+}
+
+.close-gallery{
+
+    position:absolute;
+
+    top:25px;
+
+    right:35px;
+
+    color:white;
+
+    font-size:45px;
+
+    cursor:pointer;
+}
+
+.gallery-prev,
+.gallery-next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:white;
+
+    font-size:55px;
+
+    cursor:pointer;
+
+    padding:15px;
+
+    user-select:none;
+}
+
+.gallery-prev{
+
+    left:25px;
+}
+
+.gallery-next{
+
+    right:25px;
+}
+
+#galleryCounter{
+
+    position:absolute;
+
+    bottom:30px;
+
+    color:white;
+
+    font-size:18px;
+
+    background:rgba(255,255,255,.1);
+
+    padding:8px 18px;
+
+    border-radius:30px;
+}
+
+@media(max-width:768px){
+
+.gallery-prev,
+.gallery-next{
+
+    font-size:35px;
+}
+
+.gallery-modal img{
+
+    width:95%;
+}
+
+}
+
+</style>
+<section id="workshops" class="section-spacing">
+
+    <div class="section-header">
+        <h2 class="section-title">Workshops & Training</h2>
+        <p class="section-subtitle">
+            Conducting hands-on workshops to help students develop practical skills,
+            innovation mindset, and industry-ready experience.
+        </p>
+    </div>
+
+    <div class="workshop-grid">
+
+        
+        <div class="workshop-card">
+            <img src="workshopimg.jfif" alt="Portfolio Development Workshop">
+
+            <div class="workshop-content">
+                <h3>Portfolio Development Workshop</h3>
+
+                <p>
+                    Conducted a hands-on workshop to help students build professional
+                    portfolios, GitHub profiles, resumes, and LinkedIn profiles.(2 Times)
+                </p>
+
+                <div class="workshop-meta">
+                    <span><i class="fas fa-users"></i> 120+ Students</span>
+                    <span><i class="fas fa-map-marker-alt"></i> KIPM CET</span>
                 </div>
 
-                <div class="half-width">
-                    <h3 style="margin-bottom: 20px;">Achievements & Soft Skills</h3>
-                    <div class="list-card">
-                        <ul class="check-list">
-                            <li><i class="fas fa-trophy"></i> Hackathon Participation/Winner </li>
-                            <li><i class="fas fa-check-circle"></i> Completed 4+ Real-World Projects </li>
-                            <li><i class="fas fa-star"></i> <strong>Soft Skills:</strong> Leadership, Teamwork, Creativity, Problem-Solving </li>
-                        </ul>
-                    </div>
-                </div>
+
+<button onclick="openGallery([
+'https://media.licdn.com/dms/image/v2/D5622AQH_lfNtddzqlQ/feedshare-image-high-res/B56Z57y4vFGgAU-/0/1780193398224?e=1786579200&v=beta&t=N_UAvjgL4Jb5C5z-C99GO6Xgydnr7VJn6LNsgZRXbJk',
+'https://media.licdn.com/dms/image/v2/D5622AQHsVKYw2OhMIg/feedshare-shrink_800/B56Z57yjd6HYAc-/0/1780193310954?e=1786579200&v=beta&t=bG2r_NEfCLw7r2dz-SKe6nJW8XYWGp1qIW4D1bnhujs',
+'https://media.licdn.com/dms/image/v2/D5622AQEQfmM1qyGoag/feedshare-shrink_800/B56Z57y5KOIoAk-/0/1780193400000?e=1786579200&v=beta&t=nqe6ebdEJu7vrKNNR4tgcm6YJIdmuu5AOj_IhxWuzbg',
+'https://media.licdn.com/dms/image/v2/D5622AQHL-tTPXo5MAg/feedshare-shrink_800/B56Z2R8OggHEAc-/0/1776269977870?e=1786579200&v=beta&t=6zJ9ib3T5jc7jd-YkwP7o1q64EyS9WXPxV7MlJ8LgEQ',
+'https://media.licdn.com/dms/image/v2/D5622AQH5msI7s-Lrxg/feedshare-shrink_800/B56Z57yq0fKcAc-/0/1780193341194?e=1786579200&v=beta&t=L2MxTigg7bylEiMa_2mYa8pSmprIgkk6LrOh8xbl5ZM',
+'https://media.licdn.com/dms/image/v2/D5622AQEfv5M7GWB16Q/feedshare-shrink_800/B56Z55sPV2JgAc-/0/1780158101242?e=1786579200&v=beta&t=J4sptfg0V27V-5phzj3QNWDKW6g73Bon5V-MexLVPps'
+])">
+    <i class="fas fa-images"></i>View Gallery
+</button>
+
             </div>
-        </section>
+        </div>
+
+        <!-- Workshop 2 -->
+
+        <div class="workshop-card">
+            <img src="https://media.licdn.com/dms/image/v2/D5622AQEMLD95DLHRdg/feedshare-shrink_800/B56Z6.14CdHIAc-/0/1781318255007?e=1786579200&v=beta&t=B5TSkG6WXPovITuw-TD0xhP9kFkySG9ibQ1ARjIfae0" alt="Robotics Workshop">
+
+            <div class="workshop-content">
+                <h3>Techpulse- IoT & Robotics Workshop</h3>
+
+                <p>
+                    Delivered a practical Robotics & IoT workshop introducing sensors,
+                    Arduino, automation, and real-world applications.
+                </p>
+
+                <div class="workshop-meta">
+                    <span><i class="fas fa-users"></i> 80+ Students</span>
+                    <span><i class="fas fa-map-marker-alt"></i> KIPM CET</span>
+                </div>
+
+              <button onclick="openGallery([
+'https://media.licdn.com/dms/image/v2/D5622AQEJevGNlGf2yQ/feedshare-image-high-res/B56Z.FLxxqG8AU-/0/1784645885271?e=1786579200&v=beta&t=AFwTA8jHE3lerZSz4tidJn6u1EnWlxeQQVBK5gXUcIM',
+'https://media.licdn.com/dms/image/v2/D5622AQGfAc0MRmCNBg/feedshare-image-high-res/B56Z.FLxzYIgAU-/0/1784645885397?e=1786579200&v=beta&t=O-e_K-gmD7bMigsvyH3YgBnTHle-ksrEtXHeFhh-yVY',
+'https://media.licdn.com/dms/image/v2/D5622AQFOvv3WUh6IkQ/feedshare-shrink_1280/B56Z.FLx5ZGQAM-/0/1784645885867?e=1786579200&v=beta&t=rzHUdGGJRMgg4_R_nBSE70zoK2Utjj_r8vq53F7A2oE',
+'workshopimg/w2.jpg',
+'workshopimg/w1.jpg',
+'workshopimg/w3.jpg'
+])">
+    <i class="fas fa-images"></i> View Gallery
+</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div id="workshopModal" class="modal" onclick="closeWorkshop()">
+    <span class="close">&times;</span>
+    <img id="workshopImage">
+</div>
+
+<div id="galleryModal" class="gallery-modal">
+
+    <span class="close-gallery" onclick="closeGallery()">&times;</span>
+
+    <span class="gallery-prev" onclick="prevImage()">&#10094;</span>
+
+    <img id="galleryImage">
+
+    <span class="gallery-next" onclick="nextImage()">&#10095;</span>
+
+    <div id="galleryCounter"></div>
+
+</div>
+<script>function openWorkshop(image){
+
+    document.getElementById("workshopImage").src=image;
+
+    document.getElementById("workshopModal").style.display="flex";
+
+}
+
+function closeWorkshop(){
+
+    document.getElementById("workshopModal").style.display="none";
+
+}
+
+
+let galleryImages = [];
+let currentImage = 0;
+
+function openGallery(images){
+
+    galleryImages = images;
+
+    currentImage = 0;
+
+    document.getElementById("galleryModal").style.display="flex";
+
+    showGalleryImage();
+}
+
+function showGalleryImage(){
+
+    document.getElementById("galleryImage").src =
+    galleryImages[currentImage];
+
+    document.getElementById("galleryCounter").innerHTML =
+    (currentImage+1)+" / "+galleryImages.length;
+}
+
+function nextImage(){
+
+    currentImage++;
+
+    if(currentImage>=galleryImages.length){
+
+        currentImage=0;
+    }
+
+    showGalleryImage();
+}
+
+function prevImage(){
+
+    currentImage--;
+
+    if(currentImage<0){
+
+        currentImage=galleryImages.length-1;
+    }
+
+    showGalleryImage();
+}
+
+function closeGallery(){
+
+    document.getElementById("galleryModal").style.display="none";
+}
+</script>
+
+<section id="achievement" class="achievements-section">
+
+    <center><h2 class="section-title">Achievements</h2></center>
+
+    <div class="achievements-container">
+
+       <div class="achievement-container"></div>
+<div class="achievement-card">
+    <img src="achievements/AKT_4730.JPG" alt="Achievement">
+    <h3>Received a Certificate of Appreciation from the Honorable Governor of Uttar Pradesh</h3>
+    <p> for presenting the startup and its innovation.</p>
+</div>
+        
+<div class="achievement-card">
+    <img src="achievements/i.jpg" alt="Achievement">
+    <h3>Received a Award of Appreciation from the Chairman & other</h3>
+    <p> for securing 1st rank.</p>
+</div>
+
+        <div class="achievement-card">
+            <img src="https://media.licdn.com/dms/image/v2/D5622AQEQrHYN8CoyUg/feedshare-shrink_800/B56Zx637LwJ4Ak-/0/1771588007121?e=1786579200&v=beta&t=820rcOwvLv8EXRfXmDU7-Rebga8h8qc6vHUwcuyuhPE" alt="">
+            <div class="achievement-content">
+                <h3>Exhibitor at AI Summit</h3>
+                <p>Represented and showcased startup at AI Summit 2026.</p>
+            </div>
+            </div>
+
+            <div class="achievement-card">
+    <img src="achievements/digi.jpg" alt="Achievement">
+    <h3>Top 5 Achievement at DigiCoders</h3>
+    <p> Recognized among the Top 5 performers at DigiCoders and awarded certification for outstanding performance</p>
+</div>
+
+      <div class="achievement-card">
+    <img src="achievements/Hackindia.jfif" alt="Achievement">
+    <h3>Top 5 Finalist, HackIndia Web3 & AI Hackathon   </h3>
+    <p> Achieved 5th rank overall out of 93 numerous teams and recognized by the Founder of CSharp Inc.</p>
+</div>
+      <div class="achievement-card">
+    <img src="https://media.licdn.com/dms/image/v2/D5622AQHZlYvSAu_h-Q/feedshare-shrink_480/B56Zyim.YCJMAo-/0/1772254652140?e=1786579200&v=beta&t=XBL9nV7ZK4WeGXNE4ubk5EnaRnLlOBmE7j3piPGJNdE" alt="Achievement">
+    <h3>🥇 1st Prize Winner  </h3>
+    <p> Secured 1st Place in the ThinkSprint Ideathon, organized by Evolvera Club, for presenting an innovative and impactful solution</p>
+</div>
+
+      <div class="achievement-card">
+    <img src="achievements/e1.jfif" alt="Achievement">
+    <h3>Winner, Escape Treasure Hunt – Evolvera Club (2026)   </h3>
+    <p> Awarded the Winner Trophy and Certificate of Appreciation for securing 1st Place in the Escape Treasure Hunt</p>
+</div>  
+
+
+   <div class="achievement-card">
+    <img src="achievements/gorakhpurmahotsav.png" alt="Achievement">
+    <h3>Consolation Prize, Gorakhpur Mahotsav Science Exhibition (2026)</h3>
+    <p> Awarded the Consolation Prize for demonstrating innovation, creativity, and effective project presentation</p>
+</div>  
+
+
+<div class="achievement-card">
+    <img src="achievements/1st hackthon.jfif" alt="Achievement">
+    <h3>1st Runner-Up, InnovateX Hackathon (2025)</h3>
+    <p>Secured 1st Runner-Up in the InnovateX Hackathon 2025 for developing an innovative solution, demonstrating technical expertise, creativity, teamwork, and problem-solving skills.</p>
+</div>  
+    </div>
+   
+    </div>
+    </div>
+</section>
+
+<style>
+    .certifications-section{
+    padding:80px 8%;
+    background:#0f172a;
+}
+
+.section-title{
+    color:#fff;
+    font-size:40px;
+    margin-bottom:45px;
+    position:relative;
+}
+
+.section-title::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    width:80px;
+    height:4px;
+    background:#00d4ff;
+    border-radius:10px;
+}
+
+.certificate-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.certificate-card{
+    background:#4450bb;
+    border-radius:18px;
+    padding:20px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    cursor:pointer;
+    transition:.35s;
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.certificate-card:hover{
+    transform:translateY(-8px) scale(1.02);
+    background:#00d4ff;
+    color:#fff;
+}
+
+.certificate-card span{
+    font-size:35px;
+}
+
+.certificate-card h3{
+    margin:0;
+    font-size:22px;
+}
+
+.certificate-card p{
+    margin-top:6px;
+    color:#666;
+}
+
+.certificate-card:hover p{
+    color:#fff;
+}
+
+/* Popup */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.9);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.modal img{
+    width:80%;
+    max-width:900px;
+    max-height:90vh;
+    border-radius:15px;
+    box-shadow:0 0 40px rgba(255,255,255,.3);
+    animation:zoom .3s;
+}
+
+.close{
+    position:absolute;
+    top:25px;
+    right:40px;
+    color:white;
+    font-size:45px;
+    cursor:pointer;
+}
+
+@keyframes zoom{
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+
+.more-certificates{
+    display:none;
+}
+
+#viewMoreBtn{
+    margin:40px auto 0;
+    display:block;
+    padding:14px 35px;
+    border:none;
+    border-radius:50px;
+    background:#4450bb;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#viewMoreBtn:hover{
+    background:#ca1212;
+}
+
+@media(max-width:768px){
+
+.certificate-grid{
+    grid-template-columns:1fr;
+}
+
+.modal img{
+    width:95%;
+}
+
+}
+
+
+
+
+
+
+@media(max-width:768px){
+
+.container{
+    padding:0 18px;
+}
+
+section{
+    overflow:hidden;
+}
+
+.hero{
+    min-height:auto;
+    padding-top:130px;
+}
+
+.hero h1{
+    font-size:2.2rem;
+}
+
+.hero-bio{
+    font-size:16px;
+}
+
+.hero-actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.hero-actions .btn{
+    width:100%;
+    justify-content:center;
+}
+
+.projects-grid,
+.achievements-container,
+.certificate-grid,
+.skills-container{
+
+    grid-template-columns:1fr;
+}
+
+.project-card,
+.achievement-card,
+.certificate-card{
+
+    width:100%;
+    max-width:none;
+}
+
+nav{
+
+    width:95%;
+    padding:12px 18px;
+}
+
+.logo{
+
+    font-size:22px;
+}
+
+.collab-btn{
+
+    padding:10px 18px;
+    font-size:15px;
+}
+
+img{
+
+    max-width:100%;
+    height:auto;
+}
+
+}
+
+</style>
+
+
+
+<section id="certification" class="certifications-section">
+    <h2 class="section-title">Certifications</h2>
+
+    <div class="certificate-grid">
+
+        <!-- Initially Visible -->
+
+          <div class="certificate-card" onclick="openCertificate('certificates/AImanthan.jpeg')">
+            🚀 AKTU-AI Manthan 2026
+        </div>
+
+<div class="certificate-card " onclick="openCertificate('certificates/HackIndia.jpg')">
+            🇮🇳 HackIndia 
+        </div>
+
+
+        <div class="certificate-card" onclick="openCertificate('certificates/AICTE.jpg')">
+            🎓 AICTE- AI Pre-summit
+        </div>
+  <div class="certificate-card" onclick="openCertificate('certificates/Ideathon.jpg')">
+            💡 Ideathon 
+        </div>
+         <div class="certificate-card" onclick="openCertificate('certificates/IndiaAIImpactHCLGUVI.jpeg')">
+            🇮🇳 India AI Impact HCL GUVI Certification
+        </div>
+
+         <div class="certificate-card" onclick="openCertificate('certificates/IDE.jpg')">
+            💻 IDE Bootcamp 
+        </div>
+
+    <div class="certificate-card" onclick="openCertificate('certificates/bp.jpg')">
+            💻 Buddha startup Pitchfest 1.0 2026
+        </div>
+
+
+        
+        <div class="certificate-card" onclick="openCertificate('certificates/CodeSummit2rank.jpg')">
+            🥈 Code Summit RANK 2
+        </div>
+
+        
+ <div class="certificate-card" onclick="openCertificate('certificates/iit roorke.jpg')">
+            🏛 IIT Roorkee Certification
+        </div>
+        <div class="certificate-card" onclick="openCertificate('certificates/Logic League Performance.jpg')">
+            🧠 Logic League Top Performance
+        </div>
+
+       
+<div class="certificate-card more-certificates" onclick="openCertificate('certificates/GC.png')">
+            📜 GEN AI CAMP
+        </div>
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/campuscrew.jpg')">
+            📜 CampusCrew
+        </div>
+<div class="certificate-card more-certificates" onclick="openCertificate('certificates/dd.jpg')">
+            💻 Devcation Delhi 2026
+        </div>
+      <div class="certificate-card more-certificates" onclick="openCertificate('certificates/AI Campaign LinkEnite.jpg')">
+            🏆 AI Campaign – LinkEpite Oy
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/Data Sprint Anveshan.jpg')">
+            📊 Data Sprint 
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/digicoder project development.jpeg')">
+            💡 DigiCoder Project Development Certificate
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/DC-DA.jpg')">
+            🎨 Data Analysis Certificate by DigiCoders
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/Ducatschoolof AI.jpg')">
+            🤖 Ducat School of AI certificate
+        </div>
+<div class="certificate-card more-certificates" onclick="openCertificate('certificates/BizQuest Provista2025 DU Delhi.jpg')">
+            🏅 BizQuest Provista 2025
+        </div>
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/startup Clinic 4.0 IIT delhi.jpg')">
+            🚀 Startup Clinic IIT Delhi
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/Elite CoderEWOC.jpg')">
+            🏆 Elite Coder EWOC
+        </div>
+
+        
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/EWOC.jpg')">
+            🌍 EWOC
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/EY Techathon 6.0')">
+            💼 EY Techathon 6.0
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/FundQuest 25 IIM Mumbai.jpg')">
+            🦈 FundQuest 25
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/Google Ambassador.jpg')">
+            🌐 Google Ambassador
+        </div>
+
+       
+
+        
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/HackWise 2026 hackthon IIM Indore.jpg')">
+            🏆 HackWise 2026
+        </div>
+
+      
+
+
+       
+       
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/Kascade,Kshitij 2026,IIT Kharagpur.jpg')">
+            ⚡ Kascade Kshitij
+        </div>
+
+        
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/Math-O-Logic.jpg')">
+            ➗ Math-O-Logic
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/NIT slichar.jpg')">
+            🎓 NIT Silchar
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/QuizCraze 2025 KIoT TamilNadu.jpg')">
+            ❓ QuizCraze 2025
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/quizCread coding challenge.jpg')">
+            💻 QuizCread Coding Challenge
+        </div>
+<!-- 
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/Shaastra Biz Quiz IIT madras.jpg')">
+            📈 Shaastra Biz Quiz
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/Shaastra Main Quiz IIT madras.jpg')">
+            🏛 Shaastra Main Quiz
+        </div> -->
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/Shield 1.0 BPRD jaipur.jpg')">
+            🛡 Shield 1.0
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/snow.jpeg')">
+            ❄ SnowStorm Hackathon
+        </div>
+
+      
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/StratQuest IIT Kharagpur.jpg')">
+            📈 StratQuest
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/Synaptix Frontier AI hack IIT Madras.jpg')">
+            🧠 Synaptix Frontier AI
+        </div>
+
+        <div class="certificate-card more-certificates" onclick="openCertificate('certificates/TATA Crucible by TATA.jpg')">
+            🏆 TATA Crucible
+        </div>
+
+    </div>
+
+    <button id="viewMoreBtn" onclick="toggleCertificates()">
+        View More
+    </button>
+</section>
+
+
+
+
+<div id="certificateModal" class="modal" onclick="closeCertificate()">
+    <span class="close">&times;</span>
+    <img id="certificateImage">
+</div>
+
+
+<script>function openCertificate(image){
+    document.getElementById("certificateModal").style.display="flex";
+    document.getElementById("certificateImage").src=image;
+}
+
+function closeCertificate(){
+    document.getElementById("certificateModal").style.display="none";
+}
+
+
+let expanded = false;
+
+function toggleCertificates(){
+
+    const cards = document.querySelectorAll(".more-certificates");
+    const btn = document.getElementById("viewMoreBtn");
+
+    expanded = !expanded;
+
+    cards.forEach(card=>{
+        card.style.display = expanded ? "flex" : "none";
+    });
+
+    btn.innerHTML = expanded ? "View Less" : "View More";
+}
+
+</script>
+
 <section id="resume" class="section-spacing">
     <div class="section-header">
         <h2 class="section-title">Resume</h2>
@@ -804,7 +2173,7 @@
                <i class="fas fa-eye"></i> View Fullscreen
             </a>
 
-            <a href="Krishna's Resume- 2026 .pdf"
+            <a href="https://drive.google.com/file/d/1SAIISSthk0BdduS512hyyTDG1lUlpbC9/view?usp=sharing"
                download
                class="btn btn-primary">
                <i class="fas fa-download"></i> Download Resume
@@ -813,16 +2182,323 @@
     </div>
 </section>
 
+
+<style>
+
+.contact-section{
+    padding:80px 0;
+}
+
+.contact-subtitle{
+    max-width:700px;
+    margin:15px auto 50px;
+    text-align:center;
+    color:#b8c5d6;
+    font-size:16px;
+}
+
+.contact-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:stretch;
+}
+
+.contact-info{
+    background:#122038;
+    border-radius:20px;
+    padding:35px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.contact-card{
+    margin-bottom:28px;
+}
+
+.contact-card:last-child{
+    margin-bottom:0;
+}
+
+.contact-card h3{
+    color:#00d4ff;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.contact-card p,
+.contact-card a{
+    color:#fff;
+    text-decoration:none;
+    font-size:16px;
+    line-height:1.7;
+    word-break:break-word;
+}
+
+.whatsapp-btn{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    width:100%;
+    padding:15px;
+    border-radius:12px;
+    background:#25D366;
+    color:#fff;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.whatsapp-btn:hover{
+    transform:translateY(-4px);
+}
+
+.contact-form{
+    background:#122038;
+    border-radius:20px;
+    padding:35px;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+    padding:15px 18px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:#0b1730;
+    color:#fff;
+    font-size:15px;
+}
+
+.contact-form textarea{
+    min-height:170px;
+    resize:vertical;
+}
+
+.contact-form button{
+
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#00d4ff;
+    color:#071126;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+
+    transform:translateY(-3px);
+    background:#00b7dd;
+}
+
+@media (max-width:768px){
+
+.contact-wrapper{
+
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.contact-info,
+.contact-form{
+
+    padding:22px;
+    width:100%;
+}
+
+.contact-card{
+
+    margin-bottom:22px;
+}
+
+.contact-card h3{
+
+    font-size:18px;
+}
+
+.contact-card p,
+.contact-card a{
+
+    font-size:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    font-size:15px;
+    padding:14px;
+}
+
+.contact-form textarea{
+
+    min-height:140px;
+}
+
+.whatsapp-btn{
+
+    padding:14px;
+    font-size:15px;
+}
+
+}
+
+@media (max-width:480px){
+
+.contact-section{
+
+    padding:60px 0;
+}
+
+.contact-info,
+.contact-form{
+
+    padding:18px;
+    border-radius:16px;
+}
+
+.contact-subtitle{
+
+    font-size:14px;
+    padding:0 15px;
+}
+
+.contact-card h3{
+
+    font-size:17px;
+}
+
+.contact-card p,
+.contact-card a{
+
+    font-size:14px;
+}
+
+.contact-form button{
+
+    font-size:15px;
+}
+
+}</style>
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+Contact Me
+</h2>
+
+<p class="contact-subtitle">
+Feel free to contact me 
+</p>
+
+<div class="contact-wrapper">
+
+
+<div class="contact-info">
+
+<div class="contact-card">
+<h3>📧 Email</h3>
+<p>
+<a href="mailto:krishna@swadrive.in">
+krishna@swadrive.in
+</a>
+</p>
+</div>
+
+<div class="contact-card">
+<h3>📞 Phone</h3>
+<p>
+<a href="tel:+918601445260">
++91 8601445260
+</a>
+</p>
+</div>
+
+<div class="contact-card">
+<h3>📍 Current Location</h3>
+<p>
+Gorakhpur, Uttar Pradesh
+</p>
+</div>
+
+
+
+<a
+href="https://wa.me/918601445260"
+target="_blank"
+class="whatsapp-btn">
+
+💬 Contact on WhatsApp
+
+</a>
+
+</div>
+
+<form
+action="https://formsubmit.co/krishna@swadrive.in"
+method="POST"
+class="contact-form">
+
+<input type="hidden" name="_captcha" value="false">
+
+<input type="hidden"
+name="_subject"
+value="New Portfolio Contact Request">
+
+<input
+type="text"
+name="Name"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+name="Email"
+placeholder="Your Email"
+required>
+
+<input
+type="text"
+name="Subject"
+placeholder="Subject"
+required>
+
+<textarea
+name="Message"
+rows="6"
+placeholder="Write your message..."
+required></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
     </main>
 
     <footer>
         <div class="container">
             <p>MADE With ❤️ by KRISan</p>
-           
         </div>
     </footer>
-
 </body>
-
 </html>
-
